@@ -1,0 +1,1012 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#grid__container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    " header header header "
+    " menu menu publicidad "
+    " playlist playlist publicidad "
+    " artist artist publicidad "
+    " lastest_videos lastest_videos publicidad "
+    " listen_radio listen_radio publicidad "
+    " event event publicidad "
+    " footer footer footer ";
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: 340px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 5px;
+}
+
+#grid__playlist{
+    display: grid;
+    grid-template-areas: 
+    " block1 block2 block3 block4 ";
+    grid-column-gap: 5px;
+    grid-template-rows: 1fr;
+    grid-column: span 2;
+}
+
+
+
+header{
+    grid-area: header;
+    background-image: url("./img/vocalist_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#middle__div__header{
+    height: 180px;
+    transform: translate(0px,110px);
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(114,30,91,0.37),black);
+    background-attachment: fixed; 
+    padding-left: 10px;
+    padding-top: 18px;
+    
+}
+
+#middle__section__header{
+    display: flex;
+    align-items: flex-start;  
+}
+
+#middle__section__header section{
+    padding-top: 10px;
+    margin-right: 15px;
+}
+#middle__section__header section a{
+    text-decoration: none;
+    color: burlywood;
+ }
+ #middle__section__header p{
+    color: cornsilk;
+ }
+#menu{
+    grid-area: menu;
+    display: flex;
+    justify-content: center;   
+}
+#menu ul{
+    background-color: rgb(197, 197, 185);
+    width: 50%;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 5px;
+    padding-right: 45px;
+    
+
+}
+#nav_menu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+#nav_menu li{
+    list-style-type: none;
+    padding: 10px 10px;    
+}
+#nav_menu li a{
+    text-decoration:none;
+    color: rgb(62, 59, 59);
+}
+#nav_menu li a:hover {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+#playlist{
+    grid-area: playlist;
+}
+
+
+#artist{
+    grid-area: artist;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+    padding: 10px;
+}
+#artist h2{
+    color: rgb(198, 198, 198);
+    margin: 0px;
+}
+#artist p{
+    padding: 10px;
+}
+#artist div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lastest_videos{
+    grid-area: lastest_videos;
+    background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+#lastest_videos h2{
+    color: rgb(198, 198, 198);
+    margin: 10px;
+}
+#lastest_videos iframe{
+    padding-left: 325px;
+    padding-bottom: 5px;
+    height: 320px;
+    width: 800px;
+}
+#listen_radio{
+    grid-area: listen_radio;
+    margin: 0px;
+    background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+#listen_radio h2{
+    margin: 10px;
+    margin-bottom: 0px;
+    color: rgb(198, 198, 198);
+}
+
+#event{
+    grid-area: event;
+    background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+#event h2{
+    margin: 10px;
+    margin-bottom: 0px;
+    color: rgb(198, 198, 198);
+}
+#event img{
+    padding-left: 305px;
+    padding-bottom: 5px;
+}
+#event div{
+    display: flex;
+    justify-content: center;
+}
+#event section{  
+    margin-left: 10px;
+    margin-right: 5px;
+}
+#event section button{
+    margin-top: 5px;
+}
+
+#section_dos_event{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+#section_dos_event a{
+    text-decoration: none;
+    color: #c8c8c8;
+    font-size: 18px;
+}
+#section_dos_event a:hover{
+    color: #c40000;
+    transition: 0.5s;
+}
+
+#publicidad{
+    grid-area: publicidad;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#publicidad img{
+    height: 50%;
+    width: 50%;
+}
+#publicidad section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+footer{
+    grid-area: footer;
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+footer p{
+    text-align: center;
+    color: rgb(77, 70, 70);
+}
+
+#logo{
+    font-size: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+#logo2{
+    margin-left: 0px;
+    color: #ea1538;
+}
+
+#p1__header{
+    font-family: "Audiowide", sans-serif;
+    font-weight: lighter;
+    color: burlywood;
+}
+
+#p2__header{
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    color: cornsilk;
+}
+
+.sectionheader{
+    display: flex;
+    justify-content:space-evenly;
+    width: 420px;
+
+}
+
+.sectionheader a{
+    text-decoration: none;
+    color: gainsboro;
+}
+
+.sectionheader p{
+    color: burlywood;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.registration-form{
+ /*Ajustar Posicion*/  
+ width: 200px;
+ margin-top: 25px;
+ color: #bab5b6;
+}
+
+.registration-form h2{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px 0px;
+}
+
+.registration-form p{
+    font-size: 15px;
+    margin: 2px 0px;
+}
+
+.registration-form input{
+    font-size: 16px;
+    padding: 5px 5px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.registration-form button{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 8px 0px;
+    width: 30%;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.registration-form button:hover{
+    color:rgb(193, 5, 5);
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 80px;
+}
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+  
+  .buttons :hover {
+    transform: scale(1.2);
+  }
+
+
+#block1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
+    background-attachment: fixed;
+}
+#block1 h2{
+    color: rgb(198, 198, 198);
+    margin-top: 15px;
+}
+#block1 div{
+    margin-top: 75px;
+    margin-bottom: 0px;
+}
+#block1 a{
+    color: rgb(110, 93, 71);
+    text-decoration: none;
+}
+#block1 a:hover{
+    color: rgb(223, 223, 223);
+    transition: 0.2s;
+}
+#block1 p{
+    color: rgb(183, 183, 183);
+}
+
+
+#block2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
+    background-attachment: fixed;
+}
+#block2 img{
+    margin: 10px;
+}
+#block2 a{
+    color: rgb(110, 93, 71);
+    text-decoration: none;
+}
+#block2 a:hover{
+    color: rgb(223, 223, 223);
+    transition: 0.2s;
+}
+#block3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
+    background-attachment: fixed;
+}
+#block3 a{
+    color: rgb(110, 93, 71);
+    text-decoration: none;
+}
+#block3 img{
+    margin: 10px;
+}
+#block3 a:hover{
+    color: rgb(223, 223, 223);
+    transition: 0.2s;
+}
+#block4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(132, 132, 132, 0.88), black);
+    background-attachment: fixed;
+}
+#block4 img{
+    margin: 10px;
+}
+#block4 a{
+    color: rgb(110, 93, 71);
+    text-decoration: none;
+}
+#block4 a:hover{
+    color: rgb(223, 223, 223);
+    transition: 0.2s;
+}
+
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+  }
+      
+  .search{
+    margin: 0px;
+  }
+      
+  .search button{
+    background-color: #0074D9;
+    color: #f2f2f2;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  } 
+
+footer{
+    grid-area: footer;
+    height: 90px;
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+footer p{
+    margin: 5px;
+    text-align: center;
+    color: rgb(77, 70, 70);
+}
+
+  /*Media Query*/
+
+  @media all and (max-width: 320px) {
+
+    *{
+        margin: 0px;
+    }
+    #grid__container{
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+        " header "
+        " publicidad "
+        " menu "
+        " playlist "
+        " artist "
+        " lastest_videos "
+        " listen_radio "
+        " event "
+        " footer ";
+        grid-template-columns: 320px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 5px;
+    }
+
+    header{
+        grid-area: header;
+        width: 320px;
+        background-image: url("./img/vocalist\ header.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    #middle__div__header{
+        height: 170px;
+        width: 310px;
+        transform: translate(0px,110px);
+        border-radius: 10px;
+        background-image: linear-gradient(rgba(114,30,91,0.37),black);
+        background-attachment: fixed; 
+        padding-left: 10px;
+        padding-top: 10px;
+        transform: translate(5px,10px);
+  
+    }
+    
+    #middle__section__header{
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+        margin-bottom: 0px;       
+    }
+    #middle__section__header section p,a{
+        font-size:small;
+    }
+
+    .registration-form{
+        width: 320px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .registration-form form input,p{
+        height: 20px;
+        font-size: smaller;
+    }
+
+    #publicidad{
+        grid-area: publicidad;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #publicidad h2{
+        font-size: smaller;
+    }
+    #publicidad img{
+        height: 25px;
+        width: 30px;
+    }
+    #publicidad section{
+        display: flex;
+        justify-content: space-between;
+    }
+    #publicidad section a{
+        font-size: 10px;
+    }
+
+    #menu{
+        grid-area: menu;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:right;
+
+    }
+    #menu nav{
+        margin: 0px;
+        padding: 0px;
+    }
+    #menu ul{
+        padding-left: 0px;
+        padding: 0px;
+        margin-right: 0px;
+        width: 320px;
+        border-radius: 0px;
+    }
+    #menu ul li{
+        padding-left: 0px;
+        padding: 5px;
+    }
+    #nav_menu{
+        margin: 0px;
+        padding: 0px;
+        width: 320px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:center;
+    }
+ 
+    #nav_menu li{
+        list-style-type: none;
+        margin: 0px; 
+        padding: 5px;   
+    }
+    #nav_menu li a{
+        text-decoration:none;
+        color: rgb(62, 59, 59);
+    }
+    #nav_menu li a:hover {
+        color: #ffffff;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    
+    #grid__playlist{
+        display: grid;
+        grid-template-areas: 
+        " block1 "
+        " block2 "
+        " block3 "
+        " block4 ";
+        grid-column-gap: 0px;
+        grid-row-gap: 5px;
+        grid-template-columns: 320px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        /*grid-column: span 2;*/
+    }
+    #block1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0, 90, 162, 0.88), black);
+        background-attachment: fixed;
+    }
+    #block1 h2{
+        color: rgb(198, 198, 198);
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    #block1 div{
+        margin-top: 75px;
+        margin-bottom: 0px;
+    }
+    #block1 a{
+        padding-left: 250px;
+        color: rgb(110, 93, 71);
+        text-decoration: none;
+    }
+    #block1 a:hover{
+        color: rgb(223, 223, 223);
+        transition: 0.2s;
+    }
+    #block1 p{
+        color: rgb(183, 183, 183);
+        text-align: center;
+    }
+    
+    #block2 h2{
+        color: rgb(198, 198, 198);
+        margin-top: 15px;
+    }
+    #block2 div{
+        margin-top: 75px;
+        margin-bottom: 0px;
+    }
+    #block2 a{
+        padding-left: 250px;
+        color: rgb(175, 99, 1);
+        text-decoration: none;
+    }
+    #block2 a:hover{
+        color: rgb(110, 93, 71);
+        transition: 0.2s;
+    }
+    #block2 p{
+        color: rgb(183, 183, 183);
+        text-align: center;
+    }
+
+    #block3 h2{
+        color: rgb(198, 198, 198);
+        margin-top: 15px;
+    }
+    #block3 div{
+        margin-top: 75px;
+        margin-bottom: 0px;
+    }
+    #block3 a{
+        padding-left: 250px;
+        color: rgb(175, 99, 1);
+        text-decoration: none;
+    }
+    #block3 a:hover{
+        color: rgb(223, 223, 223);
+        transition: 0.2s;
+    }
+    #block3 p{
+        color: rgb(183, 183, 183);
+        text-align: center;
+    }
+
+    #block4 h2{
+        color: rgb(198, 198, 198);
+        margin-top: 15px;
+    }
+    #block4 div{
+        margin-top: 75px;
+        margin-bottom: 0px;
+    }
+    #block4 a{
+        padding-left: 250px;
+        color: rgb(175, 99, 1);
+        text-decoration: none;
+    }
+    #block4 a:hover{
+        color: rgb(223, 223, 223);
+        transition: 0.2s;
+    }
+    #block4 p{
+        color: rgb(183, 183, 183);
+        text-align: center;
+    }
+    
+    #artist{
+        grid-area: artist;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+        padding: 10px;
+        
+    }
+    #artist h2{
+        color: rgb(198, 198, 198);
+        margin: 0px;
+        font-size: 20px;
+    }
+    #artist p{
+        text-align: justify;
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 150px;
+        overflow: hidden;
+    }
+   
+    #artist div{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #artist div img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .search input[type=text]{
+        width:130px;
+        height:15px;
+        border-radius:25px;
+        border: none;
+    }
+          
+    .search{
+        margin: 0px;
+    }
+          
+    .search button{
+        background-color: rgba(165, 42, 42, 0);
+        color: #f2f2f2;
+        padding: 0px;
+        margin-right: 0px;
+        font-size: 5px;
+        border: none;
+        cursor: pointer;
+    } 
+    
+    #lastest_videos{
+        grid-area: lastest_videos;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+    }
+    #lastest_videos h2{
+        color: rgb(198, 198, 198);
+        margin: 10px;
+        font-size: 20px;
+    }
+    #lastest_videos iframe{
+        padding-left: 10px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        height: 250px;
+        width: 310px;
+    }
+
+
+    #listen_radio{
+        grid-area: listen_radio;
+        margin: 0px;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+    }
+    #listen_radio h2{
+        margin: 10px;
+        margin-bottom: 0px;
+        color: rgb(198, 198, 198);
+        font-size: 20px;
+    }
+    
+    #event{
+        grid-area: event;
+        background-image: linear-gradient(rgba(4, 18, 25, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+    }
+    #event h2{
+        margin: 10px;
+        color: rgb(198, 198, 198);
+        font-size: 20px;
+    }
+    #event img{
+        padding-left: 10px;
+        padding-right: 0px;
+        margin-bottom: 10px;
+        height: 200px;
+        width: 250px;
+    }
+    #event div{
+        display: flex;
+        justify-content: center;
+    }
+
+    #event section button{
+        margin-top: 157px;
+    }
+    #event section p{
+        display: none;
+    }
+    
+    footer{
+        grid-area: footer;
+        height: 90px;
+        background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+        background-attachment: fixed;
+    }
+    footer p{
+        margin: 5px;
+        text-align: center;
+        color: rgb(77, 70, 70);
+    }
+  
+}
+
+/* Estilos para pagina ticket*/
+
+.pruebacolor{
+    background-color: #f2f2f2;
+    border: solid black;
+}
+
+#logo_ticket{
+    font-size: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+#logo2_ticket{
+    margin-left: 0px;
+    color: #ea1538;
+}
+
+.centralizador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centralizador p{
+    text-align: center;
+}
+
+.centralizador h5{
+    color: rgb(235, 235, 235);
+}
+
+.centralizador img{
+  width: 300px;
+    height: 300px;
+}
+
+.gunsimg_ticket{
+    display: flex;
+    justify-content: center;
+}
+
+.footer_ticket{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+.footer_ticket p{
+    margin: 5px;
+    width: 90vw;
+    text-align: center;
+    color: rgb(77, 70, 70);
+}
+
+.header_ticket{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.header_redes_ticket{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.header_redes_ticket li{
+    list-style-type: none;  
+}
+.header_redes_ticket li a{
+    text-decoration:none;
+    color: rgb(62, 59, 59);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+.header_redes_ticket li a:hover {
+    color: #989898;
+    transition: 0.2s;
+}
+
+#header_fondo_ticket{
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+
+.backgroud_ticket{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url("./img/estadio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroud_ticket p{
+    color: rgb(224, 223, 223);
+}
+
+#animacion_ticket_h2{
+    padding-top: 20px;
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+  
+  @keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+#teloneros_h5_ticket{
+    background-image: linear-gradient(rgba(129, 129, 129, 0.54), rgba(255, 255, 255, 0.556));
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+@media all and (max-width: 720px) {
+.gunsimg_ticket{
+        display: flex;
+        justify-content: center;
+}
+
+.gunsimg_ticket img{
+    width: 300px;
+    height: 250px;
+}
+
+.footer_ticket{
+    height: 160px;
+    width: 100vw;
+    background-image: linear-gradient(rgba(9, 17, 21, 0.501), rgb(5, 2, 2));
+    background-attachment: fixed;
+}
+.footer_ticket p{
+    margin: 5px;
+    text-align: center;
+    color: rgb(77, 70, 70);
+}
+.header_redes_ticket{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.backgroud_ticket{
+    background-image:none;
+    background-image:linear-gradient(rgb(66, 66, 66), rgba(119, 0, 0, 0.51));
+    background-attachment: fixed;
+}
+
+}
+
+
+
